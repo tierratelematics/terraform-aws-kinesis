@@ -44,4 +44,12 @@ variable "enabled" {
 variable "starting_position" {
   description = "The position in the stream where AWS Lambda should start reading. Can be one of either TRIM_HORIZON or LATEST."
   default     = "TRIM_HORIZON"
+
+  //
+  // TRIM_HORIZON - Start reading at the last untrimmed record in the shard in the system, which is the oldest data record in the shard.
+  // LATEST - Start reading just after the most recent record in the shard, so that you always read the most recent data in the shard.
+  //
+  // More details in the `GetShardIterator` page:
+  // http://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType
+  //
 }
