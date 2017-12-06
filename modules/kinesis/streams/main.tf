@@ -3,7 +3,7 @@
  */
 
 terraform {
-  required_version = ">= 0.9, < 0.10"
+  required_version = ">= 0.9"
 }
 
 resource "aws_kinesis_stream" "kinesis-stream" {
