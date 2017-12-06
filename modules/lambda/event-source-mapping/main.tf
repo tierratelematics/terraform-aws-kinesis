@@ -3,7 +3,7 @@
  */
 
 terraform {
-  required_version = ">= 0.9, < 0.10"
+  required_version = ">= 0.9"
 }
 
 resource "aws_lambda_event_source_mapping" "event_source_mapping" {
